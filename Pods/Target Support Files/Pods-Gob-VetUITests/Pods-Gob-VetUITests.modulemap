@@ -1,0 +1,6 @@
+framework module Pods_Gob_VetUITests {
+  umbrella header "Pods-Gob-VetUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
