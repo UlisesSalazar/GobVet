@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		00431D9121F647C7009D9248 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00431D9021F647C7009D9248 /* Member.swift */; };
 		00431D9321F64AB9009D9248 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00431D9221F64AB9009D9248 /* Session.swift */; };
-		0045E59C21FA675900BABD17 /* BusanMembers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0045E59A21FA675900BABD17 /* BusanMembers.xcdatamodeld */; };
 		0092E1C021E6BFC7009A0A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092E1BF21E6BFC7009A0A3F /* AppDelegate.swift */; };
 		0092E1C221E6BFC7009A0A3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092E1C121E6BFC7009A0A3F /* LoginViewController.swift */; };
 		0092E1C521E6BFC7009A0A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0092E1C321E6BFC7009A0A3F /* Main.storyboard */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		00431D9021F647C7009D9248 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		00431D9221F64AB9009D9248 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		0045E59B21FA675900BABD17 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0092E1BC21E6BFC7009A0A3F /* Gob-Vet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gob-Vet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0092E1BF21E6BFC7009A0A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0092E1C121E6BFC7009A0A3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -136,7 +134,6 @@
 				0092E1C621E6BFC9009A0A3F /* image.xcassets */,
 				0092E1C821E6BFC9009A0A3F /* LaunchScreen.storyboard */,
 				0092E1CB21E6BFC9009A0A3F /* Info.plist */,
-				0045E59A21FA675900BABD17 /* BusanMembers.xcdatamodeld */,
 			);
 			path = "Gob-Vet";
 			sourceTree = "<group>";
@@ -420,7 +417,6 @@
 				00431D9321F64AB9009D9248 /* Session.swift in Sources */,
 				0092E1C021E6BFC7009A0A3F /* AppDelegate.swift in Sources */,
 				00431D9121F647C7009D9248 /* Member.swift in Sources */,
-				0045E59C21FA675900BABD17 /* BusanMembers.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,19 +745,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0045E59A21FA675900BABD17 /* BusanMembers.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0045E59B21FA675900BABD17 /* Model.xcdatamodel */,
-			);
-			currentVersion = 0045E59B21FA675900BABD17 /* Model.xcdatamodel */;
-			path = BusanMembers.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 0092E1B421E6BFC7009A0A3F /* Project object */;
 }

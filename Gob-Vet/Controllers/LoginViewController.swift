@@ -9,34 +9,118 @@
 import UIKit
 import CoreGraphics
 
+//adelay function
+func delay(_ seconds: Double, completion: @escaping ()->Void) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: completion)
+}
+
+
 class LoginViewController: UIViewController {
 
-   
-    @IBOutlet  var siguiente: UIButton!
     
+    //animationLogin
+    @IBOutlet var Clinico: UIButton!
+    @IBOutlet var Hospital: UIButton!
+    @IBOutlet var Alumno: UIButton!
     
+    @IBOutlet var Usuario: UILabel!
+    @IBOutlet var Contraseña: UILabel!
     
-       //login text y pasworrd
+    @IBOutlet var herradura1: UIImageView!
+    @IBOutlet var caballo: UIImageView!
+ 
+
+    //login text y pasworrd
     
     @IBOutlet weak var textFileClinico: UITextField!
     
     @IBOutlet weak var  paswoordClinico: UITextField!
-
+    
     //let shapeLayer = CAShapeLayer ()
-      override func viewDidLoad(){
-    super.viewDidLoad()
+    override func viewDidLoad(){
+        super.viewDidLoad()
+    
     
 
+    // animationLogin
+    
+    let spinner = UIActivityIndicatorView(style: .whiteLarge)
+    let status = UIImageView(image: UIImage(named: "banner"))
+    let label = UILabel()
+    let messages = ["Connecting ...", "Authorizing ...", "Sending credentials ...", "Failed"]
+    
+    var statusPosition = CGPoint.zero
+    
+        Clinico.layer.cornerRadius = 8.0
+    Clinico.layer.masksToBounds = true
+    
+    spinner.frame = CGRect( x: -20.0, y: 6.0, width: 20.0, height: 20.0)
+    spinner.startAnimating()
+    spinner.alpha = 0.0
+        
+
     }
-    //PASWOOR TEXTFILE
-    @IBAction func loginButtonWasTouchedUpInside(sender: Any) {
-        let username = textFileClinico.text
-        let paswoord = paswoordClinico.text
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        if Member.login(userName: username!, password: paswoord!) {
-            performSegue(withIdentifier: "MemberList", sender: self)
+        
+        Usuario.center.x = view.bounds.width
+        Contraseña.center.x = view.bounds.width
+        Clinico.center.x = view.bounds.width
+        Hospital.center.x = view.bounds.width
+        Alumno.center.x = view.bounds.width
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: [ ], animations: {
+            self.Usuario.center.x += self.view.bounds.width
             
+        },
+                       completion:nil
+        )
         
+        
+        UIView.animate(withDuration: 0.8, delay: 0.5, options: [ ],
+                       animations: {
+                        self.Contraseña.center.x += self.view.bounds.width
+        },
+                       
+                       completion: nil
+        )
+        UIView.animate(withDuration: 0.9, delay: 0.6, options: [ ], animations: {
+            self.herradura1.center.x += self.view.bounds.width
+        },
+                       completion: nil
+        )
+        
+        UIView.animate(withDuration: 0.3, delay:0.6, options: [ ],
+                       animations: {
+                        
+                        self.caballo.center.x += self.view.bounds.width
+        },
+                       completion: nil
+            
+        )
+        
+        
+    }
+    
+    @IBAction func login() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let nextField = (textField === Usuario) ? Contraseña : Usuario
+        nextField?.becomeFirstResponder()
+        return true
+    }
+    
+
+    
+
+
         
     
     }
@@ -91,6 +175,4 @@ class LoginViewController: UIViewController {
  
    */
         
- }
 
-}
